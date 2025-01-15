@@ -11,7 +11,7 @@ conda install -y -c conda-forge ffmpeg
 pip install -r requirements.txt
 
 # OpenCV dependencies
-sudo apt -y install libgl1
+apt -y install libgl1
 
 # Download all the checkpoints from HuggingFace using the mirror site
 export HF_ENDPOINT=https://hf-mirror.com

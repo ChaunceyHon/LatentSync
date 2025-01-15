@@ -14,7 +14,10 @@ pip install -r requirements.txt
 sudo apt -y install libgl1
 
 # Download all the checkpoints from HuggingFace using the mirror site
-huggingface-cli download chunyu-li/LatentSync --local-dir checkpoints --exclude "*.git*" "README.md" --repo-type model --endpoint https://hf-mirror.com
+export HF_ENDPOINT=https://hf-mirror.com
+echo 'export HF_ENDPOINT=https://hf-mirror.com' >> ~/.bashrc
+source ~/.bashrc
+huggingface-cli download chunyu-li/LatentSync --local-dir checkpoints --exclude "*.git*" "README.md" --repo-type model
 
 # Soft links for the auxiliary models
 mkdir -p ~/.cache/torch/hub/checkpoints

@@ -13,8 +13,8 @@ pip install -r requirements.txt
 # OpenCV dependencies
 sudo apt -y install libgl1
 
-# Download all the checkpoints from HuggingFace
-huggingface-cli download chunyu-li/LatentSync --local-dir checkpoints --exclude "*.git*" "README.md"
+# Download all the checkpoints from HuggingFace using the mirror site
+huggingface-cli download chunyu-li/LatentSync --local-dir checkpoints --exclude "*.git*" "README.md" --repo-type model --endpoint https://hf-mirror.com
 
 # Soft links for the auxiliary models
 mkdir -p ~/.cache/torch/hub/checkpoints

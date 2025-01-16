@@ -1,4 +1,10 @@
 #先修改setup_env.sh文件后直接运行
 source setup_env.sh
 
+#解决公共链接问题：
+wget https://cdn-media.hf-mirror.com/frpc-gradio-0.3/frpc_linux_amd64 -O frpc_linux_amd64_v0.3
+mv frpc_linux_amd64_v0.3 /root/miniconda3/envs/latentsync/lib/python3.10/site-packages/gradio/
+chmod +x /root/miniconda3/envs/latentsync/lib/python3.10/site-packages/gradio/frpc_linux_amd64_v0.3
+
+#启动
 python gradio_app.py

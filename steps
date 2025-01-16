@@ -1,0 +1,4 @@
+#先修改setup_env.sh文件后直接运行
+source setup_env.sh
+
+python gradio_app.py
